@@ -17,7 +17,7 @@ const TouristSpotCards = ({place}) => {
                 <h2 className="card-title">{country}</h2>
                 <p>{description}</p>
                 <div className="card-actions justify-end">
-                    <NavLink to = {`http://localhost:5000/touristSpots/${_id}`}>
+                    <NavLink to = {`http://localhost:5173/touristSpots/${_id}`}>
                         <button  className="btn btn-primary w-full">Learn now!</button>
                     </NavLink>
                 
