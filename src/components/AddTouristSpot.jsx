@@ -1,3 +1,5 @@
+import Swal from 'sweetalert2'
+
 const AddTouristSpot = () => {
 
     const handleAddTouristSpot = (e) => {
@@ -30,11 +32,14 @@ const AddTouristSpot = () => {
     .then(res => res.json())
     .then(data => {
         console.log(data);
+        Swal.fire({
+            title: 'Success!',
+            text: 'Place added successfully',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+          })
     })
  }
-
-
-
 
     return (
         <div>
