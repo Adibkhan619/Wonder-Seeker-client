@@ -63,7 +63,7 @@ const Navbar = () => {
                 <div className="navbar-end">
 
                 <NavLink><button className="btn">Login</button></NavLink>
-                <NavLink><button className="btn">Register</button></NavLink>
+                <NavLink to="/register"><button className="btn">Register</button></NavLink>
                  
                 </div>
             </div>
