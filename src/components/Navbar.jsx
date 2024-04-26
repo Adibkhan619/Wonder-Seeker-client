@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "./AuthProvider";
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
     const Navlinks = (
         <>
             <li>
@@ -18,10 +21,12 @@ const Navbar = () => {
             <li>
                 <NavLink>My List</NavLink>
             </li>
-
-            
         </>
     );
+
+    const handleLogOut = () => {
+        logOut().then().catch();
+    };
 
     return (
         <div>
@@ -58,13 +63,39 @@ const Navbar = () => {
                     <a className="btn btn-ghost text-xl">daisyUI</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 space-x-3">{Navlinks}</ul>
+                    <ul className="menu menu-horizontal px-1 space-x-3">
+                        {Navlinks}
+                    </ul>
                 </div>
                 <div className="navbar-end">
-
-                <NavLink to="/login"><button className="btn">Login</button></NavLink>
-                <NavLink to="/register"><button className="btn">Register</button></NavLink>
-                 
+                    {user ? (
+                        <div className="flex items-center gap-2">
+                            <img
+                                className="w-10 h-10 border rounded-full"
+                                title={user.displayName}
+                                src={user.photoURL}
+                                alt=""
+                            />
+                            <p className="hidden md:block lg:block">
+                                {user.email}
+                            </p>
+                            <button
+                                onClick={handleLogOut}
+                                className="btn border-none bg-amber-200 lg:text-lg font-semibold text-gray-700 hidden md:block lg:block"
+                            >
+                                Log Out
+                            </button>
+                        </div>
+                    ) : (
+                        <div>
+                            <NavLink to="/login">
+                                <button className="btn">Login</button>
+                            </NavLink>
+                            <NavLink to="/register">
+                                <button className="btn">Register</button>
+                            </NavLink>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
