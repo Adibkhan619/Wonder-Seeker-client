@@ -3,6 +3,7 @@ import Root from "../Root";
 import Home from "../../Home";
 import Register from "../../Register";
 import Login from "../../Login";
+import AddTouristSpot from "../../AddTouristSpot";
 
 const Router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const Router = createBrowserRouter([
         {
             path:"/login",
             element: <Login></Login>
+        },
+        {
+            path: "/addTouristSpot",
+            element: <AddTouristSpot></AddTouristSpot>
         }
       ]
     },
