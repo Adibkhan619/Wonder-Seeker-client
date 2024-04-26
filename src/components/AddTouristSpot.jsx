@@ -18,9 +18,20 @@ const AddTouristSpot = () => {
             name, country, location, description, cost, season, time, visitorPerYear, userName, userEmail
         }
         console.log(newTouristSpot);
-    }
+   
 
-
+    fetch('http://localhost:5000/touristSpots' , {
+        method: 'POST',
+        headers: {
+            'content-type' : 'application/json',
+        },
+        body: JSON.stringify(newTouristSpot)
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+    })
+ }
 
 
 
