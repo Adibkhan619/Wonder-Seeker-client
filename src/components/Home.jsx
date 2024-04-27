@@ -1,21 +1,18 @@
 // import Countries from "./countries/Countries";
 
 import { useLoaderData } from "react-router-dom";
-import Countries from "./countries/Countries";
+import CountriesCard from "./countries/CountriesCard";
 
-
- 
 const Home = () => {
-
     const countries = useLoaderData();
+    
     console.log(countries);
 
-
     return (
-        <div >
+        <div>
             <h1>This is Home</h1>
             <div>
-            <Countries></Countries>
+                {countries.map((country) => <CountriesCard country={country} key={country._id}></CountriesCard>)}
             </div>
         </div>
     );
