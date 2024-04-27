@@ -1,14 +1,18 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Navbar";
+import { Carousel } from "react-responsive-carousel";
+
 
 
 const Root = () => {
     return (
-        <div>
+        <div >
             <Navbar></Navbar>
-            <div className="max-w-screen-xl mx-auto my-5">
+            <Outlet></Outlet>
+            <Carousel></Carousel>
+            {/* <div className="max-w-screen-xl mx-auto my-5">
                 <Outlet></Outlet>
-            </div>
+            </div> */}
             
         </div>
     );

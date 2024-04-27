@@ -1,6 +1,9 @@
+import { useContext } from 'react';
 import Swal from 'sweetalert2'
+import { AuthContext } from './AuthProvider';
 
 const AddTouristSpot = () => {
+    const {user} = useContext(AuthContext)
 
     const handleAddTouristSpot = (e) => {
         e.preventDefault();
@@ -156,6 +159,7 @@ const AddTouristSpot = () => {
                                 <input
                                     type="text"
                                     name ="userName"
+                                    defaultValue={user.displayName}
                                     placeholder="Your Name"
                                     className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
@@ -167,6 +171,7 @@ const AddTouristSpot = () => {
                                 <input
                                     type="email"
                                     name ="userEmail"
+                                    defaultValue={user.email}
                                     placeholder="Your Email"
                                     className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />

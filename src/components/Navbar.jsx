@@ -19,7 +19,7 @@ const Navbar = () => {
             </li>
 
             <li>
-                <NavLink>My List</NavLink>
+                <NavLink to ="/myList">My List</NavLink>
             </li>
         </>
     );
