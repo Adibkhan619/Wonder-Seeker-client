@@ -1,48 +1,52 @@
-import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
-// import MyListTable from "./MyListTable";
+import { FiEdit2 } from "react-icons/fi";
+import Swal from "sweetalert2";
 
 const MyList = () => {
     const { user } = useContext(AuthContext);
     const allPlace = useLoaderData();
-    console.log(allPlace);
-    {
-        /* <div>
-                <div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Country</th>
-                                <th>Season</th>
-                                <th>Visitor Per Year</th>
-                                <th>Cost</th>
-                                <th>update</th>
-                                <th>delete</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {myPlace.map((item) => (
-                                <tr key={item._ids}>
-                                    <td>{item.name}</td>
-                                    <td>{item.country}</td>
-                                    <td>{item.season}</td>
-                                    <td>{item.visitorPerYear}</td>
-                                    <td>{item.cost}</td>
-                                    <td>Update</td>
-                                    <td>Delete</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
-            </div> */
-    }
-    const myPlace = allPlace.filter(
+    const [place,  setPlace] = useState(allPlace);
+    const myPlace = place.filter(
         (item) => item.userName == user.displayName
     );
     console.log(myPlace, "here");
+
+    const handleDelete = (_id) => {
+        console.log(_id);
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/touristSpots/${_id}`, {
+                    method: "DELETE",
+                })
+                    .then((res) => res.json())
+                    .then((data) => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success",
+                            });
+                            const newList = place.filter(
+                                (item) => item._id !== _id
+                            );
+                            setPlace(newList);
+                        }
+                    });
+            }
+        });
+    };
+
     return (
         <div>
             <div className="p-6 px-10">
@@ -91,7 +95,7 @@ const MyList = () => {
                             </th>
                             <th className="cursor-pointer border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 transition-colors hover:bg-blue-gray-50">
                                 <p className="antialiased font-sans text-sm text-blue-gray-900 flex items-center justify-between gap-2 font-normal leading-none opacity-70">
-                                    Travel time/ Season{" "}
+                                    Tour Duration/ Season{" "}
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
@@ -205,29 +209,44 @@ const MyList = () => {
                                             <p className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">
                                                 {item.visitorPerYear}
                                             </p>
-                                            {/* <p className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal opacity-70">{visitorPerYear}</p> */}
+                                            {/* <p className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal opacity-70">Per Year</p> */}
                                         </div>
                                     </div>
                                 </td>
                                 <td className="p-4 border-b border-blue-gray-50">
                                     <div className="flex items-center gap-3">
                                         <div className="flex flex-col">
-                                            <p className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">
-                                                {item.cost}
+                                            <p className="block antialiased font-sans text-base leading-normal text-blue-gray-900 font-normal">
+                                                {item.cost}$
                                             </p>
                                             {/* <p className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal opacity-70">{visitorPerYear}</p> */}
                                         </div>
                                     </div>
                                 </td>
                                 <td className="p-4 border-b border-blue-gray-50 space-x-8">
-                                    <button className="btn btn-primary">
-                                        Update
+                                    <Link to ={`/updateTouristSpot/${item._id}`} >
+                                    <button  className="btn btn-circle btn-outline text-xl">
+                                        <FiEdit2 />
                                     </button>
-                                    
+                                    </Link>
                                 </td>
                                 <td className="p-4 border-b border-blue-gray-50 space-x-8">
-                                    <button className="btn btn-secondary">
-                                        Delete
+                                    
+                                    <button onClick={() => handleDelete(item._id)} className="btn btn-circle btn-outline">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-6 w-6"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="2"
+                                                d="M6 18L18 6M6 6l12 12"
+                                            />
+                                        </svg>
                                     </button>
                                 </td>
                                 {/* <td className="p-4 border-b border-blue-gray-50">
