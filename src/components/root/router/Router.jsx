@@ -9,6 +9,7 @@ import PlaceDetails from "../../PlaceDetails";
 import MyList from "../../MyList";
 import PrivateRoutes from "../../PrivateRoutes";
 import UpdateTouristSpot from "../../UpdateTouristSpot";
+import Countries from "../../countries/Countries";
 
 const Router = createBrowserRouter([
     {
@@ -18,7 +19,8 @@ const Router = createBrowserRouter([
       children: [
         {
             path: "/",
-            element: <Home></Home>
+            element: <Home></Home>,
+            loader: () => fetch('http://localhost:5000/countries')
         },
         {
             path: "/register",
@@ -39,8 +41,7 @@ const Router = createBrowserRouter([
         },
         {
             path: "/touristSpots/:id",
-            element: <PrivateRoutes><PlaceDetails></PlaceDetails></PrivateRoutes>
-            ,
+            element: <PrivateRoutes><PlaceDetails></PlaceDetails></PrivateRoutes>,
             loader: ({params}) => fetch(`http://localhost:5000/touristSpots/${params.id}`)
         },
         {
@@ -52,6 +53,11 @@ const Router = createBrowserRouter([
             path: "/updateTouristSpot/:id",
             element: <UpdateTouristSpot></UpdateTouristSpot>,
             loader: ({params}) => fetch(`http://localhost:5000/touristSpots/${params.id}`)
+        },
+        {
+            path: "/countries",
+            element: <Countries></Countries>,
+            loader: () => fetch('http://localhost:5000/countries')
         }
       ]
     },
