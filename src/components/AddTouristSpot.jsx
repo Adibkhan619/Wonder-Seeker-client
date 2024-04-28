@@ -1,16 +1,16 @@
-import { useContext } from 'react';
-import Swal from 'sweetalert2'
-import { AuthContext } from './AuthProvider';
+import { useContext } from "react";
+import Swal from "sweetalert2";
+import { AuthContext } from "./AuthProvider";
 
 const AddTouristSpot = () => {
-    const {user} = useContext(AuthContext)
-    
+    const { user } = useContext(AuthContext);
+
     const handleAddTouristSpot = (e) => {
         e.preventDefault();
         const form = e.currentTarget;
         const image = form.image.value;
         const name = form.name.value;
-        const country= form.country.value;
+        const country = form.country.value;
         const location = form.location.value;
         const description = form.description.value;
         const cost = form.cost.value;
@@ -21,33 +21,42 @@ const AddTouristSpot = () => {
         const userEmail = user.email;
 
         const newTouristSpot = {
-            name, country, location, description, cost, season, time, visitorPerYear, userName, userEmail, image
-        }
+            name,
+            country,
+            location,
+            description,
+            cost,
+            season,
+            time,
+            visitorPerYear,
+            userName,
+            userEmail,
+            image,
+        };
         console.log(newTouristSpot);
-   
 
-    fetch('http://localhost:5000/touristSpots' , {
-        method: 'POST',
-        headers: {
-            'content-type' : 'application/json',
-        },
-        body: JSON.stringify(newTouristSpot)
-    })
-    .then(res => res.json())
-    .then(data => {
-        console.log(data);
-        Swal.fire({
-            title: 'Success!',
-            text: 'Place added successfully',
-            icon: 'success',
-            confirmButtonText: 'Cool'
-          })
-    })
- }
+        fetch("http://localhost:5000/touristSpots", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(newTouristSpot),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                Swal.fire({
+                    title: "Success!",
+                    text: "Place added successfully",
+                    icon: "success",
+                    confirmButtonText: "Cool",
+                });
+            });
+    };
 
     return (
-        <div>
-            <section className="p-6 bg-gray-800 dark:bg-gray-100 text-gray-50 dark:text-gray-900">
+        <div className=" dark:text-gray-100  text-gray-700  ">
+            <section className="p-6 bg-gray-800 dark:bg-gray-100 opacity-100 text-gray-500 dark:text-gray-900">
                 <form
                     onSubmit={handleAddTouristSpot}
                     noValidate=""
@@ -61,14 +70,10 @@ const AddTouristSpot = () => {
                                 Lorem ipsum dolor sit, amet consectetur
                                 adipisicing elit. Adipisci fuga autem eum!
                             </p>
-                            <p>{user.displayName}</p>
-                            <p>{user.email}</p>
-
+                            <p><span className="font-semibold">User : </span> {user.displayName}</p>
+                            <p><span className="font-semibold"> Email : </span>{user.email}</p>
+                            
                         </div>
-                        
-
-
-
 
                         <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                             <div className="col-span-full sm:col-span-3">
@@ -77,11 +82,27 @@ const AddTouristSpot = () => {
                                 </label>
                                 <input
                                     type="text"
-                                    name = "name"
+                                    name="name"
                                     placeholder="Name"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2" 
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
+                                
+                            <div className="col-span-full sm:col-span-3">
+                                <label htmlFor="lastname" className="text-sm">
+                                    Country
+                                </label>
+                            <select name="country" className="select select-bordered h-4 min-h-10 w-full  rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2 text-sm">
+                                <option >Bangladesh</option>
+                                <option>Malaysia</option>
+                                <option>Thailand</option>
+                                <option>Indonesia</option>
+                                <option>Vietnam</option>
+                                <option>Cambodia</option>
+                            </select>
+                            </div> 
+
+{/* 
                             <div className="col-span-full sm:col-span-3">
                                 <label htmlFor="lastname" className="text-sm">
                                     Country
@@ -89,10 +110,15 @@ const AddTouristSpot = () => {
                                 <input
                                     type="text"
                                     placeholder="Country"
-                                    name ="country"
+                                    name="country"
                                     className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
-                            </div>
+                            </div> */}
+
+
+
+
+
                             <div className="col-span-full sm:col-span-3">
                                 <label htmlFor="email" className="text-sm">
                                     Location
@@ -100,8 +126,8 @@ const AddTouristSpot = () => {
                                 <input
                                     type="text"
                                     placeholder="Location"
-                                    name ="location"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    name="location"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-3">
@@ -111,8 +137,8 @@ const AddTouristSpot = () => {
                                 <input
                                     type="text"
                                     placeholder="Photo"
-                                    name ="image"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    name="image"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full">
@@ -122,8 +148,8 @@ const AddTouristSpot = () => {
                                 <input
                                     type="text"
                                     placeholder="Short Description"
-                                    name= "description"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    name="description"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-2">
@@ -133,8 +159,8 @@ const AddTouristSpot = () => {
                                 <input
                                     type="text"
                                     placeholder="Average Cost"
-                                    name ="cost"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    name="cost"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-2">
@@ -144,8 +170,8 @@ const AddTouristSpot = () => {
                                 <input
                                     type="text"
                                     placeholder="Season"
-                                    name = "season"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    name="season"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-2">
@@ -156,8 +182,8 @@ const AddTouristSpot = () => {
                                     id="zip"
                                     type="text"
                                     placeholder="Travel Time"
-                                    name ="time"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    name="time"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-2">
@@ -167,9 +193,9 @@ const AddTouristSpot = () => {
                                 <input
                                     id="zip"
                                     type="text"
-                                    name ="visitorPerYear"
+                                    name="visitorPerYear"
                                     placeholder="Visitors per year"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             {/* <div className="col-span-full sm:col-span-2">
@@ -196,16 +222,17 @@ const AddTouristSpot = () => {
                                     className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div> */}
-                            
+
                             <div className="col-span-full sm:col-span-4 ">
-                                    <button type="submit"
-                                     className="btn col-span-full lg:col-span-4 sm:col-span-3 my-2 w-full mt-5"
-                                     >Add to your collection</button>
+                                <button
+                                    type="submit"
+                                    className="btn col-span-full lg:col-span-4 sm:col-span-3 my-2 w-full mt-5"
+                                >
+                                    Add to your collection
+                                </button>
                             </div>
-                            
                         </div>
                     </div>
-
                 </form>
             </section>
         </div>

@@ -75,7 +75,7 @@ const UpdateTouristSpot = () => {
 
     return (
         <div>
-            <section className="p-6 bg-gray-800 dark:bg-gray-100 text-gray-50 dark:text-gray-900">
+            <section className="p-6 bg-gray-800 dark:bg-gray-100 text-gray-500 dark:text-gray-900">
                 <form
                     onSubmit={handleUpdate}
                     noValidate=""
@@ -103,7 +103,7 @@ const UpdateTouristSpot = () => {
                                     name="name"
                                     defaultValue={name}
                                     placeholder="Name"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-3">
@@ -115,7 +115,7 @@ const UpdateTouristSpot = () => {
                                     placeholder="Country"
                                     defaultValue={country}
                                     name="country"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-3">
@@ -127,7 +127,7 @@ const UpdateTouristSpot = () => {
                                     placeholder="Location"
                                     defaultValue={location}
                                     name="location"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-3">
@@ -139,7 +139,7 @@ const UpdateTouristSpot = () => {
                                     placeholder="Photo"
                                     defaultValue={image}
                                     name="image"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full">
@@ -151,7 +151,7 @@ const UpdateTouristSpot = () => {
                                     placeholder="Short Description"
                                     defaultValue={description}
                                     name="description"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-2">
@@ -163,7 +163,7 @@ const UpdateTouristSpot = () => {
                                     placeholder="Average Cost"
                                     name="cost"
                                     defaultValue={cost}
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-2">
@@ -175,7 +175,7 @@ const UpdateTouristSpot = () => {
                                     placeholder="Season"
                                     name="season"
                                     defaultValue={season}
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-2">
@@ -188,7 +188,7 @@ const UpdateTouristSpot = () => {
                                     defaultValue={time}
                                     placeholder="Travel Time"
                                     name="time"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-2">
@@ -201,7 +201,7 @@ const UpdateTouristSpot = () => {
                                     defaultValue={visitorPerYear}
                                     name="visitorPerYear"
                                     placeholder="Visitors per year"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
 

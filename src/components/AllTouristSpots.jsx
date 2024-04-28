@@ -8,7 +8,7 @@ const AllTouristSpots = () => {
     // const []
     console.log(touristSpots);
     return (
-        <div  className="grid grid-rows-1 md:grid-cols-2 lg:grid-cols-3 gap-3 justify-center">
+        <div  className="grid grid-rows-1 md:grid-cols-2 lg:grid-cols-4 gap-3 justify-center lg:mx-10">
             
             {
                 touristSpots.map(place => <TouristSpotCards place={place} key={place._id}></TouristSpotCards>)

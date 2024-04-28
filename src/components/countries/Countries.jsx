@@ -6,23 +6,25 @@
 // import Thailand from "./Thailand";
 // import Vietnam from "./Vietnam";
 
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
+import TouristSpotCards from "../TouristSpotCards";
 
 
 const Countries = () => {
     
     const countries = useLoaderData();
     console.log(countries);
+    const {name} = useParams();
+    const country = countries.filter(country => country.country == name);
+    console.log(country);
 
     return (
-        <div>
-            <h1>Render me</h1>
-            {/* <Bangladesh></Bangladesh>
-            <Malaysia></Malaysia>
-            <Thailand></Thailand>
-            <Indonesia></Indonesia>
-            <Cambodia></Cambodia>
-            <Vietnam></Vietnam> */}
+        <div className="grid grid-cols-3">
+            {
+                
+                    country.map(place => <TouristSpotCards place={place} key={place._id}></TouristSpotCards>)
+                
+            }
         </div>
     );
 };

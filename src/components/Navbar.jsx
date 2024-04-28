@@ -1,9 +1,24 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+    const [theme, setTheme] = useState('autumn');
+    useEffect(() => {
+        localStorage.setItem('theme', theme)
+        const localTheme = localStorage.getItem('theme');
+        document.querySelector('html').setAttribute('data-theme', localTheme)
+    }, [theme])
+
+    const handleToggle = e => {
+        if (e.target.checked) {
+            setTheme ('halloween')
+        }
+        else{
+            setTheme('autumn')
+        }
+    }
     const Navlinks = (
         <>
             <li>
@@ -68,6 +83,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
+                <input value="" type="checkbox" 
+                onChange={handleToggle} className="toggle" />
                     {user ? (
                         <div className="flex items-center gap-2">
                             <img

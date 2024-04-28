@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 
 
 const CountriesCard = ({country}) => {
 
     const {name, _id, description, image} =country;
     return (
-        <div>
+        <Link to ={ `/countries/${name}`}>
             <div className="card w-96 bg-base-100 shadow-xl">
   <figure><img src={image} alt={name} /></figure>
   <div className="card-body">
@@ -15,7 +16,7 @@ const CountriesCard = ({country}) => {
     </div>
   </div>
 </div>
-        </div>
+        </Link>
         
     );
 };
