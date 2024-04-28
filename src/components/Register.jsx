@@ -152,6 +152,18 @@ const Register = () => {
                                         {error}
                                     </small>
                                 </div>
+                                            {/* {
+                                                user?  <Link to="/myList">
+                                    <button
+                                        type="submit"
+                                        className="btn border-none font-bold text-gray-800 text-lg bg-orange-500 w-full "
+                                    >
+                                        Register
+                                    </button>
+                                    </Link> : 
+
+                                            } */}
+
                                 <div className="form-control mt-6">
                                     <button
                                         type="submit"
@@ -159,6 +171,7 @@ const Register = () => {
                                     >
                                         Register
                                     </button>
+                                    
                                 </div>
                                 <p>
                                     <small>Already have an account? </small>

@@ -19,13 +19,19 @@ const Countries = () => {
     console.log(country);
 
     return (
-        <div className="grid grid-cols-3">
+
+        
+    <div className="mx-10">
+        {/* <p>{name}</p> */}
+            <img src={name} alt="" />
+            <div className="grid grid-cols-3">
             {
                 
                     country.map(place => <TouristSpotCards place={place} key={place._id}></TouristSpotCards>)
                 
             }
         </div>
+    </div>
     );
 };
 

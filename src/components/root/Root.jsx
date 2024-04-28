@@ -1,16 +1,19 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Navbar";
-import { Carousel } from "react-responsive-carousel";
+import UserReview from "../style/UserReview";
+
 
 
 
 
 const Root = () => {
     return (
-        <div >
+        <div className=" ">
+            
             <Navbar></Navbar>
             <Outlet></Outlet>
-            <Carousel></Carousel>
+            {/* <UserReview></UserReview> */}
+
         </div>
     );
 };
