@@ -56,25 +56,22 @@ const Register = () => {
                 <Helmet>
                     <title>Register</title>
                 </Helmet>
-                <div className="lg:hero md:hero lg:max-w-7xl rounded-3xl mx-auto lg:h-[630px]  lg:bg-gray-700">
+                <div className="lg:hero md:hero lg:max-w-full  mx-auto lg:h-[630px]  lg:bg-gray-700">
                     <img
-                        className="lg:hero-overlay lg:h-[630px] px-3 lg:px-0 rounded-3xl lg:opacity-50"
-                        src="https://i.postimg.cc/k5cY4ZqG/banner5.jpg"
+                        className="lg:hero-overlay lg:h-[630px] px-3 lg:px-0 lg:opacity-90"
+                        src="https://i.postimg.cc/V66rsDys/david-marcu-78-A265w-Pi-O4-unsplash.jpg"
                         alt=""
                     />
                     <div className="lg:hero-content px-5 lg:px-16 lg:gap-10 flex-col lg:flex-row-reverse">
                         <div className="text-center space-y-3 lg:text-left">
-                            <h1 className="text-5xl md:text-yellow-200 text-gray-700 lg:text-yellow-200 py-5 font-bold animate__bounceIn animate__animated">
+                            <h1 className="text-5xl md:text-yellow-200 text-gray-500 lg:text-gray-200 py-5 font-bold animate__bounceIn animate__animated">
                                 Unlock Exclusive Benefits! Register Today.
                             </h1>
-                            <p className="p-6 rounded-lg font-semibold bg-orange-100 bg-opacity-70 text-gray-700">
-                                Join our community of homebuyers and sellers to
-                                access personalized property recommendations,
-                                exclusive deals, and expert advice. Start your
-                                real estate journey now by signing up below.
+                            <p className="p-6 rounded-lg font-semibold bg-opacity-25 bg-orange-100  text-gray-200">
+                            Join our community of travelers and gain access to personalized recommendations, special offers, and insider insights tailored to your preferences. Sign up today to start your journey towards unforgettable travel experiences.
                             </p>
                         </div>
-                        <div className="card mt-5 shrink-0 w-full max-w-sm shadow-2xl bg-opacity-85 bg-amber-200 animate__fadeInDown animate__animated">
+                        <div className="card glass mt-5 shrink-0 w-full max-w-sm shadow-2xl bg-opacity-85 animate__fadeInDown animate__animated">
                             <form
                                 onSubmit={handleRegister}
                                 className="card-body "
@@ -173,7 +170,7 @@ const Register = () => {
                                     </button>
                                     
                                 </div>
-                                <p>
+                                <p className="text-gray-200">
                                     <small>Already have an account? </small>
                                     <Link
                                         to="/login"

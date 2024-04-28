@@ -51,14 +51,15 @@ const Login = () => {
       <Helmet>
         <title>Login</title>
       </Helmet>
-        <div className="lg:hero lg:max-w-7xl rounded-3xl mx-auto lg:h-[600px] lg:bg-gray-900">
-              <img className="lg:hero-overlay lg:h-[600px] rounded-3xl p-3 lg:p-0 lg:opacity-70" src="https://i.postimg.cc/5t1kf1cD/banner1.jpg" alt="" />
-  <div className="lg:hero-content lg:px-16 lg:gap-10 flex-col-reverse lg:flex-row-reverse">
+        <div className="lg:hero lg:max-w-full  mx-auto lg:h-[630px] lg:bg-gray-900">
+              <img className="lg:hero-overlay lg:max-h-[630px] p-3 lg:p-0 lg:opacity-70" src="https://i.postimg.cc/V66rsDys/david-marcu-78-A265w-Pi-O4-unsplash.jpg" alt="" />
+  <div className="lg:hero-content lg:px-16 lg:gap-10 justify-evenly flex-col-reverse lg:flex-row">
     <div className="text-center lg:text-left">
-      <h1 className="text-5xl lg:text-yellow-200 text-gray-800 py-5 font-bold animate__bounceIn animate__animated">Login Now!</h1>
-      <p className="p-6 mx-5 lg:mx-0 rounded-lg  font-semibold bg-orange-100 bg-opacity-70 text-gray-700">Unlock the gateway to unparalleled industrial opportunities by registering now on our website. Gain exclusive access to a diverse array of industrial complexes, from cutting-edge factories to state-of-the-art power plants.</p>
+      <h1 className="text-7xl lg:text-gray-200 text-gray-500  py-5 font-bold animate__bounceIn animate__animated">Login Now!</h1>
+      <p className="p-6 mx-5 lg:mx-0 rounded-lg  font-semibold bg-orange-100 bg-opacity-20 sm:text-gray-700 lg:text-gray-200">
+Welcome back! Log in to access your personalized travel dashboard, where you can manage your bookings, save favorite destinations, and stay updated on exclusive offers.</p>
     </div>
-          <div className="card shrink-0 lg:w-full m-5 max-w-sm shadow-2xl lg:bg-opacity-90  bg-amber-200 animate__fadeInDown animate__animated">
+          <div className="card glass shrink-0 lg:w-full m-5 max-w-sm shadow-2xl lg:bg-opacity-90  animate__fadeInDown animate__animated">
             <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -100,7 +101,7 @@ const Login = () => {
 
 <div className="flex items-center px-4 py-1 space-x-1">
 		<div className="flex-1  h-px sm:w-16 dark:bg-gray-300"></div>
-		<p className="px-3 text-sm dark:text-gray-600">Login with social accounts</p>
+		<p className="px-3 text-sm dark:text-gray-300">Login with social accounts</p>
 		<div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
 	</div>
 	<div className="flex justify-center space-x-4">
@@ -116,7 +117,7 @@ const Login = () => {
 			</svg>
 		</button>
 	</div>
-	<p className="mb-8 text-center">
+	<p className="mb-8 text-center text-gray-400">
               <small>Do not have an account?{" "}</small>
               <Link to="/register" className="hover:text-blue-600 underline">
                 <small>Register</small>
