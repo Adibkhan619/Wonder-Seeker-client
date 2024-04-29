@@ -55,7 +55,7 @@ const Login = () => {
               <img className="lg:hero-overlay lg:max-h-[630px] p-3 lg:p-0 lg:opacity-70" src="https://i.postimg.cc/V66rsDys/david-marcu-78-A265w-Pi-O4-unsplash.jpg" alt="" />
   <div className="lg:hero-content lg:px-16 lg:gap-10 justify-evenly flex-col-reverse lg:flex-row">
     <div className="text-center lg:text-left">
-      <h1 className="text-7xl lg:text-gray-200 text-gray-500  py-5 font-bold animate__bounceIn animate__animated">Login Now!</h1>
+      <h1 className="text-7xl lg:text-gray-200 text-gray-500  py-5 font-bold animate__bounceIn animate__animated sacramento">Login Now!</h1>
       <p className="p-6 mx-5 lg:mx-0 rounded-lg  font-semibold bg-orange-100 bg-opacity-20 sm:text-gray-700 lg:text-gray-200">
 Welcome back! Log in to access your personalized travel dashboard, where you can manage your bookings, save favorite destinations, and stay updated on exclusive offers.</p>
     </div>

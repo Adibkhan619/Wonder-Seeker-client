@@ -5,6 +5,8 @@ import HomeTypewriter from "./style/HomeTypewriter";
 import Login from "./Login";
 import HomeCountries from "./HomeCountries";
 import HomeTouristSpot from "./HomeTouristSpot";
+import BannerCarousel from "./style/BannerCarousel";
+
 
 const Home = () => {
 
@@ -12,12 +14,13 @@ const Home = () => {
         <div className="mukta">
             <Banner></Banner>
             <HomeTypewriter></HomeTypewriter>
-            <Login></Login>
-            {/* <BannerCarousel></BannerCarousel> */}
+            <BannerCarousel></BannerCarousel>     
+
+            
 
             <div className="border-gray-300 border-dashed border-y-4 lg:my-14 lg:mx-20">
                 <h1 className="text-5xl py-8 text-center"><span className="acme text-7xl">Explore </span> 
-                     the <span className=" sacramento text-7xl">Wonders</span>{" "}
+                     the <span className=" sacramento font-semibold text-7xl">Wonders</span>{" "}
                     of{" "}
                     <span className="text-red-600  font-bold font-sans">
                         Southeast Asia
@@ -38,6 +41,17 @@ const Home = () => {
             <HomeTouristSpot></HomeTouristSpot>
 
 
+            <div className="border-gray-300 border-dashed border-y-4 lg:my-14 lg:mx-20">
+                            <h1 className="text-5xl py-8 text-center"><span className="acme text-7xl">Join </span> 
+                                Our <span className=" sacramento font-semibold text-7xl">Community</span>{" "}
+                                of{" "}
+                                <span className="text-red-600  font-bold font-sans">
+                                    Travelers
+                                </span>
+                            </h1>
+             </div>
+             <Login></Login>
+
             <div className="border-gray-300 my-8 border-dashed border-y-4 lg:my-14 lg:mx-20 space-y-4">
             <h1 className="text-5xl pt-6 text-center"><span className="acme text-7xl">Reviews </span> 
                      from <span className=" sacramento text-7xl">Our</span>{" "}
@@ -55,7 +69,6 @@ const Home = () => {
                     for more adventures.
                 </p>
             </div>
-
             <UserReview></UserReview>
         </div>
     );
