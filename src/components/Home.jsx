@@ -16,8 +16,8 @@ const Home = () => {
             {/* <BannerCarousel></BannerCarousel> */}
 
             <div className="border-gray-300 border-dashed border-y-4 lg:my-14 lg:mx-20">
-                <h1 className="text-5xl py-8 text-center">
-                    Explore the <span className="font-semibold">Wonders</span>{" "}
+                <h1 className="text-5xl py-8 text-center"><span className="acme text-7xl">Explore </span> 
+                     the <span className=" sacramento text-7xl">Wonders</span>{" "}
                     of{" "}
                     <span className="text-red-600  font-bold font-sans">
                         Southeast Asia
@@ -26,7 +26,7 @@ const Home = () => {
             </div>
             <HomeCountries></HomeCountries>
 
-            <div className="border-gray-300 border-dashed border-y-4 lg:my-14 lg:mx-20">
+            <div className="border-gray-300 border-dashed my-8 border-y-4 lg:my-14 lg:mx-20">
                 <h1 className="text-5xl py-8 text-center oleo font-bold"><span className="text-red-600  font-bold font-sans">
                         Discover 
                     </span><span className="josefin"> Like </span>
@@ -38,12 +38,13 @@ const Home = () => {
             <HomeTouristSpot></HomeTouristSpot>
 
 
-            <div className="border-gray-300 border-dashed border-y-4 lg:my-14 lg:mx-20 space-y-4">
-                <h1 className="text-5xl pt-8 text-center font-semibold">
+            <div className="border-gray-300 my-8 border-dashed border-y-4 lg:my-14 lg:mx-20 space-y-4">
+            <h1 className="text-5xl pt-6 text-center"><span className="acme text-7xl">Reviews </span> 
+                     from <span className=" sacramento text-7xl">Our</span>{" "}
+                    of{" "}
                     <span className="text-red-600  font-bold font-sans">
-                        Reviews
-                    </span>{" "}
-                    from Our Adventurers
+                        Adventurers
+                    </span>
                 </h1>
                 <p className="text-center pb-8">
                     Discover why travelers can not stop raving about their

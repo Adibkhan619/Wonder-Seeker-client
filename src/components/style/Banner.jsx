@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Drawer from "./Drawer";
 
 
 const Banner = () => {
@@ -11,9 +12,9 @@ const Banner = () => {
       <h1 className="mb-5 text-5xl font-bold ">Explore Your World</h1>
       <p className="mb-5">
 Embark on a journey of discovery with our curated collection of travel experiences. From breathtaking landscapes to vibrant cultures, our website is your gateway to endless adventures. </p>
-<Link to="/register"><button className="btn btn-primary">Get Started</button>
-</Link>
-      
+{/* <Link to="/register"><button className="btn btn-primary">Get Started</button>
+</Link> */}
+      <Drawer></Drawer>
     </div>
   </div>
 </div>

@@ -1,24 +1,12 @@
-import { useContext, useEffect, useState } from "react";
+
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
+import Drawer from "./style/Drawer";
+import { useContext } from "react";
 
 const Navbar = () => {
-    const { user, logOut } = useContext(AuthContext);
-    const [theme, setTheme] = useState('autumn');
-    useEffect(() => {
-        localStorage.setItem('theme', theme)
-        const localTheme = localStorage.getItem('theme');
-        document.querySelector('html').setAttribute('data-theme', localTheme)
-    }, [theme])
-
-    const handleToggle = e => {
-        if (e.target.checked) {
-            setTheme ('halloween')
-        }
-        else{
-            setTheme('autumn')
-        }
-    }
+    const { user } = useContext(AuthContext);
+    
     const Navlinks = (
         <>
             <li>
@@ -39,13 +27,13 @@ const Navbar = () => {
         </>
     );
 
-    const handleLogOut = () => {
-        logOut().then().catch();
-    };
+    // const handleLogOut = () => {
+    //     logOut().then().catch();
+    // };
 
     return (
         <div>
-            <div className="navbar bg-opacity-20">
+            <div className="navbar josefin glass bg-opacity-20">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div
@@ -70,7 +58,7 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 px-5 space-x-2"
+                            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 px-5 space-x-2 text-lg"
                         >
                             {Navlinks}
                         </ul>
@@ -78,13 +66,12 @@ const Navbar = () => {
                     <a className="btn btn-ghost text-xl">daisyUI</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 space-x-3">
+                    <ul className="menu menu-horizontal px-1 space-x-3 text-lg">
                         {Navlinks}
                     </ul>
                 </div>
                 <div className="navbar-end">
-                <input value="" type="checkbox" 
-                onChange={handleToggle} className="toggle" />
+    
                     {user ? (
                         <div className="flex items-center gap-2">
                             <img
@@ -96,21 +83,24 @@ const Navbar = () => {
                             <p className="hidden md:block lg:block">
                                 {user.email}
                             </p>
-                            <button
+                            <Drawer></Drawer>
+
+                            {/* <button
                                 onClick={handleLogOut}
                                 className="btn border-none bg-amber-200 lg:text-lg font-semibold text-gray-700 hidden md:block lg:block"
                             >
                                 Log Out
-                            </button>
+                            </button> */}
                         </div>
                     ) : (
                         <div>
-                            <NavLink to="/login">
+                            <Drawer></Drawer>
+                            {/* <NavLink to="/login">
                                 <button className="btn">Login</button>
                             </NavLink>
                             <NavLink to="/register">
                                 <button className="btn">Register</button>
-                            </NavLink>
+                            </NavLink> */}
                         </div>
                     )}
                 </div>

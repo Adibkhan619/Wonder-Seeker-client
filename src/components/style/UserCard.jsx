@@ -3,7 +3,7 @@
 const UserCard = ({ user }) => {
     const { name, review, img } = user;
     return (
-        <div className="flex  mx-2 flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800">
+        <div className="flex glass h-full  mx-2 flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800">
             <img
                 src={img}
                 alt=""

@@ -11,9 +11,9 @@ const HomeTouristSpot = () => {
         .then(data => setPlaces(data))
     }, [])
     return (
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+        <div className="lg:mx-24 mx-3 grid lg:grid-cols-3 md:grid-cols-2 grid-rows-1 justify-center gap-5">
             {
-                places.map(place => <TouristSpotCards key = { place._id} place={place}></TouristSpotCards>)
+                places.slice(0,6).map(place => <TouristSpotCards key = { place._id} place={place}></TouristSpotCards>)
             }
         </div>
     );

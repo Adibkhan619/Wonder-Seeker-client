@@ -6,7 +6,8 @@ const HomeTypewriter = () => {
   return (
     <div className='App my-14'>
       <h1 style={{  margin: 'auto 0', fontWeight: 'normal', fontSize:48, textAlign:'center' }}>
-        Embark on a journey of{' '}
+        <span className="oleo text-6xl">Embark </span>
+         on a <span className="acme text-6xl">journey</span>  of{' '}
         <span style={{ color: 'red', fontWeight: 'bold', fontSize:48, }}>
           {/* Style will be inherited from the parent element */}
           <Typewriter
