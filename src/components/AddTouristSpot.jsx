@@ -64,9 +64,6 @@ const AddTouristSpot = () => {
                     className="container flex flex-col mx-auto space-y-12 glass"
                 >
                     <div className="my-8 grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm space-y-4 bg-gray-900 dark:bg-gray-500 bg-opacity-20 glass " 
-                    
-                    // style={{backgroundImage: 'url(https://i.postimg.cc/WbrnPb6W/diego-jimenez-A-NVHPka9-Rk-unsplash.jpg)'}}
-                    
                     >
                         <div className="space-y-2 col-span-full lg:col-span-1">
                             <p className="font-semibold text-xl">Add Tourist Spot</p>
