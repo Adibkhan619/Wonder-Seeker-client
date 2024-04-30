@@ -5,7 +5,7 @@ import UserCard from "./UserCard";
 const UserReview = () => {
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/users")
+        fetch("https://tourism-management-server-gold.vercel.app/users")
             .then((res) => res.json())
             .then((data) => {
                 setUsers(data);

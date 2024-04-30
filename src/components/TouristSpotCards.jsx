@@ -30,7 +30,7 @@ const TouristSpotCards = ({ place }) => {
                         </h1>
                     </div>
                     <div className="flex justify-between">
-                        <h1>Average Cost:</h1>
+                        <h1>Average Cost (Local):</h1>
                         <h1 className="font-semibold">{cost}$</h1>
                     </div>
                     <div className="flex justify-between">

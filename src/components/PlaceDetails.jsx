@@ -22,7 +22,7 @@ const PlaceDetails = () => {
                 <Helmet>
                     <title>{name}</title>
                 </Helmet>
-            <div className="card-body rounded-3xl mx-1 my-1 glass mt-5  lg:mx-5 lg:card-side bg-base-100 shadow-2xl gap-10">
+            <div className="card-body rounded-3xl mx-1 my-1 glass lg:my-5  lg:mx-5 lg:card-side bg-base-100 shadow-2xl gap-10 ">
                 <figure className="items-center flex">
                     <img className="rounded-3xl" src={image} alt="Album" />
                 </figure>

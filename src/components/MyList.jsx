@@ -27,7 +27,7 @@ const MyList = () => {
             confirmButtonText: "Yes, delete it!",
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/touristSpots/${_id}`, {
+                fetch(`https://tourism-management-server-gold.vercel.app/touristSpots/${_id}`, {
                     method: "DELETE",
                 })
                     .then((res) => res.json())
@@ -177,7 +177,8 @@ const MyList = () => {
                             <tr key={item._id}>
                                 <td className="p-4 border-b border-blue-gray-50">
                                     <div className="flex items-center gap-3">
-                                        <div className="flex flex-col">
+                                        <div className="flex items-center gap-3">
+                                            <img className="w-12 h-12 rounded-full" src={item.image} alt="" />
                                             <p className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal">
                                                 {item.name}
                                             </p>

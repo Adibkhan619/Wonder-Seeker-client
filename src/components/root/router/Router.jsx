@@ -22,7 +22,7 @@ const Router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch("http://localhost:5000/countries"),
+                loader: () => fetch("https://tourism-management-server-gold.vercel.app/countries"),
             },
             {
                 path: "/register",
@@ -43,7 +43,7 @@ const Router = createBrowserRouter([
             {
                 path: "/allTouristSpots",
                 element: <AllTouristSpots></AllTouristSpots>,
-                loader: () => fetch("http://localhost:5000/touristSpots"),
+                loader: () => fetch("https://tourism-management-server-gold.vercel.app/touristSpots"),
             },
             {
                 path: "/touristSpots/:id",
@@ -53,7 +53,7 @@ const Router = createBrowserRouter([
                     </PrivateRoutes>
                 ),
                 loader: ({ params }) =>
-                    fetch(`http://localhost:5000/touristSpots/${params.id}`),
+                    fetch(`https://tourism-management-server-gold.vercel.app/touristSpots/${params.id}`),
             },
             {
                 path: "/myList",
@@ -62,23 +62,23 @@ const Router = createBrowserRouter([
                         <MyList></MyList>
                     </PrivateRoutes>
                 ),
-                loader: () => fetch("http://localhost:5000/touristSpots"),
+                loader: () => fetch("https://tourism-management-server-gold.vercel.app/touristSpots"),
             },
             {
                 path: "/updateTouristSpot/:id",
                 element: <UpdateTouristSpot></UpdateTouristSpot>,
                 loader: ({ params }) =>
-                    fetch(`http://localhost:5000/touristSpots/${params.id}`),
+                    fetch(`https://tourism-management-server-gold.vercel.app/touristSpots/${params.id}`),
             },
             {
                 path: "/countries",
                 element: <Countries></Countries>,
-                loader: () => fetch("http://localhost:5000/countries"),
+                loader: () => fetch("https://tourism-management-server-gold.vercel.app/countries"),
             },
             {
                 path: "/countries/:name",
                 element: <Countries></Countries>,
-                loader: () => fetch("http://localhost:5000/touristSpots"),
+                loader: () => fetch("https://tourism-management-server-gold.vercel.app/touristSpots"),
             },
         ],
     },

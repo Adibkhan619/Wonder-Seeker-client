@@ -3,7 +3,10 @@
 const UserCard = ({ user }) => {
     const { name, review, img } = user;
     return (
-        <div className="flex glass h-full  mx-2 flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800">
+        <div className="flex glass h-full  mx-2 flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800
+        
+        transition ease-in-out delay-0  hover:-translate-y-1 hover:scale-110 hover:bg-gray-50 duration-300 
+        ">
             <img
                 src={img}
                 alt=""

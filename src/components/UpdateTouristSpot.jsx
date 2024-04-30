@@ -53,7 +53,7 @@ const UpdateTouristSpot = () => {
         })
         .then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/touristSpots/${_id}`, {
+                fetch(`https://tourism-management-server-gold.vercel.app/touristSpots/${_id}`, {
                     method: "PUT",
                     headers: {
                         "content-type": "application/json",
