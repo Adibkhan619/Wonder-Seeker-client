@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "./AuthProvider";
+import { Helmet } from "react-helmet";
 
 const AddTouristSpot = () => {
     const { user } = useContext(AuthContext);
@@ -57,6 +58,9 @@ const AddTouristSpot = () => {
 
     return (
         <div className=" dark:text-gray-100  text-gray-900  ">
+                <Helmet>
+                    <title>Add Tourist</title>
+                </Helmet>
             <section className="p-6 bg-gray-600 dark:bg-gray-700 opacity-100 text-gray-500 dark:text-gray-900 glass " style={{
                             backgroundImage:
                                 "url(https://i.postimg.cc/yYPY8m85/mantas-hesthaven-g1-Wdc-Kc-V3w-unsplash.jpg)",

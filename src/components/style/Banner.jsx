@@ -6,7 +6,7 @@ import Drawer from "./Drawer";
 const Banner = () => {
     return (
         <div>
-            <div className="hero  lg:min-h-[600px]" style={{backgroundImage: 'url(https://i.postimg.cc/HL38CFhP/felix-rostig-Um-V2wr-Vbq8-unsplash.jpg)'}}>
+            <div className="hero -z-9999  lg:min-h-[600px]" style={{backgroundImage: 'url(https://i.postimg.cc/HL38CFhP/felix-rostig-Um-V2wr-Vbq8-unsplash.jpg)'}}>
             
   <div className="hero-overlay bg-gray-900 bg-opacity-30"></div>
   <div className="hero-content  text-center text-neutral-content">

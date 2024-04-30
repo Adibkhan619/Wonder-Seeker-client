@@ -8,20 +8,25 @@ import HomeTouristSpot from "./HomeTouristSpot";
 import BannerCarousel from "./style/BannerCarousel";
 import { Fade } from "react-awesome-reveal";
 import HomeDecor from "./style/HomeDecor";
+import { Helmet } from "react-helmet";
+// import Drawer from "./style/Drawer";
 // import Drawer2 from "./style/Drawer2";
 
 const Home = () => {
 
     return (
         <div className="mukta">
+                <Helmet>
+                    <title>Dream Seeker | Home</title>
+                </Helmet>
             <Fade>
-
+            {/* <Drawer></Drawer> */}
             {/* <Drawer2></Drawer2> */}
             <Banner></Banner>
             <HomeTypewriter></HomeTypewriter>
             <BannerCarousel></BannerCarousel>     
 
-            <div className="border-gray-300 border-dashed border-y-4 lg:my-14 lg:mx-20">
+            <div className="border-gray-300 mx-5 border-dashed border-y-4 lg:my-14 lg:mx-20 mb-10">
                 <h1 className="text-5xl py-8 text-center"><span className="acme text-7xl">Explore </span> 
                      the <span className=" sacramento font-semibold text-7xl">Wonders</span>{" "}
                     of{" "}
@@ -34,7 +39,7 @@ const Home = () => {
 
             <HomeDecor></HomeDecor>
 
-            <div className="border-gray-300 border-dashed my-8 border-y-4 lg:my-14 lg:mx-20">
+            <div className="border-gray-300 mx-5 border-dashed my-8 border-y-4 lg:my-14 lg:mx-20">
                 <h1 className="text-5xl py-8 text-center oleo font-bold"><span className="text-red-600  font-bold font-sans">
                         Discover 
                     </span><span className="josefin"> Like </span>
@@ -45,7 +50,7 @@ const Home = () => {
             </div>
             <HomeTouristSpot></HomeTouristSpot>
 
-            <div className="border-gray-300 border-dashed border-y-4 lg:my-14 lg:mx-20">
+            <div className="border-gray-300 border-dashed mx-5 border-y-4 my-10 lg:my-14 lg:mx-20">
                             <h1 className="text-5xl py-8 text-center"><span className="acme text-7xl">Join </span> 
                                 Our <span className=" sacramento font-semibold text-7xl">Community</span>{" "}
                                 of{" "}
@@ -56,7 +61,7 @@ const Home = () => {
              </div>
              <Login></Login>
 
-            <div className="border-gray-300 my-8 border-dashed border-y-4 lg:my-14 lg:mx-20 space-y-4">
+            <div className="border-gray-300 mx-5 my-8 border-dashed border-y-4 lg:my-14 lg:mx-20 space-y-4">
             <h1 className="text-5xl pt-6 text-center"><span className="acme text-7xl">Reviews </span> 
                      from <span className=" sacramento text-7xl font-bold">Our</span>{" "}
                     {" "}

@@ -56,18 +56,18 @@ const Register = () => {
                 <Helmet>
                     <title>Register</title>
                 </Helmet>
-                <div className="lg:hero md:hero lg:max-w-full  mx-auto lg:h-[630px]  lg:bg-gray-700">
+                <div className="hero  max-w-full  mx-auto lg:h-[630px]  lg:mb-20">
                     <img
-                        className="lg:hero-overlay lg:h-[630px] px-3 lg:px-0 lg:opacity-90"
+                        className="hero-overlay lg:h-[630px]  lg:px-0 lg:opacity-90"
                         src="https://i.postimg.cc/V66rsDys/david-marcu-78-A265w-Pi-O4-unsplash.jpg"
                         alt=""
                     />
-                    <div className="lg:hero-content px-5 lg:px-16 lg:gap-10 flex-col lg:flex-row-reverse">
+                    <div className="hero-content px-5 lg:px-16 lg:gap-10 flex-col lg:flex-row-reverse">
                         <div className="text-center space-y-3 lg:text-left">
-                            <h1 className="text-5xl md:text-yellow-200 text-gray-500 lg:text-gray-200 py-5 font-bold animate__bounceIn animate__animated">
+                            <h1 className="text-5xl  acme py-5 font-bold animate__bounceIn animate__animated">
                                 Unlock Exclusive Benefits! Register Today.
                             </h1>
-                            <p className="p-6 rounded-lg font-semibold bg-opacity-25 bg-orange-100  text-gray-200">
+                            <p className="p-6 rounded-lg font-base bg-opacity-25 bg-orange-100 opacity-70 oleo">
                             Join our community of travelers and gain access to personalized recommendations, special offers, and insider insights tailored to your preferences. Sign up today to start your journey towards unforgettable travel experiences.
                             </p>
                         </div>

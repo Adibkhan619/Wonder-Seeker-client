@@ -10,13 +10,14 @@ import MyList from "../../MyList";
 import PrivateRoutes from "../../PrivateRoutes";
 import UpdateTouristSpot from "../../UpdateTouristSpot";
 import Countries from "../../countries/Countries";
+import Error from "../../Error";
 // import Bangladesh from "../../countries/Bangladesh";
 
 const Router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
-
+        errorElement: <Error></Error>,
         children: [
             {
                 path: "/",

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from "react-router-dom";
 
 const PlaceDetails = () => {
@@ -18,12 +19,15 @@ const PlaceDetails = () => {
     } = place;
     return (
         <div>
-            <div className="card-body rounded-3xl glass mt-5  lg:mx-5 lg:card-side bg-base-100 shadow-2xl gap-10">
+                <Helmet>
+                    <title>{name}</title>
+                </Helmet>
+            <div className="card-body rounded-3xl mx-1 my-1 glass mt-5  lg:mx-5 lg:card-side bg-base-100 shadow-2xl gap-10">
                 <figure className="items-center flex">
                     <img className="rounded-3xl" src={image} alt="Album" />
                 </figure>
 
-                <div className=" w-1/2 lg:space-y-2">
+                <div className=" lg:w-1/2 lg:space-y-2">
                     <div >
                         <h2 className=" text-4xl">{name}</h2>
                         <p className="py-5">{description}</p>

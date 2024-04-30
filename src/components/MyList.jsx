@@ -4,6 +4,7 @@ import { AuthContext } from "./AuthProvider";
 import { FiEdit2 } from "react-icons/fi";
 import Swal from "sweetalert2";
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 const MyList = () => {
     const { user } = useContext(AuthContext);
@@ -51,6 +52,9 @@ const MyList = () => {
     return (
         <Fade>
             <div>
+            <Helmet>
+                    <title>My List</title>
+                </Helmet>
             <div className="p-6 px-10 min-h-screen">
                 <table className="mt-4 w-full min-w-max table-auto text-left">
                     <thead>

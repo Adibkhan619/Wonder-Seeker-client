@@ -14,7 +14,7 @@ const UserReview = () => {
     console.log(users);
     return (
         
-        <div className="flex  lg:my-16">
+        <div className="flex my-10 lg:my-16">
             <Marquee>
             {users.map((user) => (
                 <UserCard user={user} key={user._id}></UserCard>

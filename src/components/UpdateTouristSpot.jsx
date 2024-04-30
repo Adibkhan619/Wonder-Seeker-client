@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "./AuthProvider";
 import { useLoaderData } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const UpdateTouristSpot = () => {
     const { user } = useContext(AuthContext);
@@ -77,14 +78,17 @@ const UpdateTouristSpot = () => {
 
     return (
         <div>
-            <section className="p-6 bg-gray-800 dark:bg-gray-100 text-gray-500 dark:text-gray-900">
+                <Helmet>
+                    <title>Update Tourist Spot</title>
+                </Helmet>
+            <section className="p-6 bg-gray-600 dark:bg-gray-700 opacity-100 text-gray-500 dark:text-gray-900 glass " style={{backgroundImage: 'url(https://i.postimg.cc/HL38CFhP/felix-rostig-Um-V2wr-Vbq8-unsplash.jpg)'}}>
                 <form
                     onSubmit={handleUpdate}
                     noValidate=""
                     action=""
                     className="container flex flex-col mx-auto space-y-12"
                 >
-                    <div className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-900 dark:bg-gray-300">
+                    <div className="my-8 grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm space-y-4   glass ">
                         <div className="space-y-2 col-span-full lg:col-span-1">
                             <p className="font-medium">Add Tourist Spot</p>
                             <p className="text-xs">
@@ -109,17 +113,18 @@ const UpdateTouristSpot = () => {
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-3">
-                                <label htmlFor="lastname" className="text-sm">
+                                <label htmlFor="lastname" className="text-lg font-semibold text-gray-900">
                                     Country
                                 </label>
-                                <input
-                                    type="text"
-                                    placeholder="Country"
-                                    defaultValue={country}
-                                    name="country"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
-                                />
-                            </div>
+                            <select name="country" className="select select-bordered h-4 min-h-10 w-full opacity-85  rounded-md focus:ring focus:ring-opacity-75 item-center text-gray-900 dark:text-gray-400 my-auto focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2 text-sm">
+                                <option >Bangladesh</option>
+                                <option>Malaysia</option>
+                                <option>Thailand</option>
+                                <option>Indonesia</option>
+                                <option>Vietnam</option>
+                                <option>Cambodia</option>
+                            </select>
+                            </div> 
                             <div className="col-span-full sm:col-span-3">
                                 <label htmlFor="email" className="text-sm">
                                     Location

@@ -1,10 +1,10 @@
 const HomeDecor = () => {
     return (
-        <div className="lg:my-28 ">
-            <div className="flex mx-40 card lg:flex-row gap-10 items-center">
+        <div className="lg:my-28 mt-10 mx-5">
+            <div className="flex lg:mx-40 card lg:flex-row gap-10 items-center">
                 <div>
                     <img
-                        className="lg:w-[800px]"
+                        className="lg:w-[800px] w-[300px]"
                         src="https://i.postimg.cc/3RKvmXP4/pngwing-com-1.png"
                         alt=""
                     />
@@ -23,7 +23,7 @@ const HomeDecor = () => {
                 </div>
                 {/* */}
             </div>
-            <div className="flex items-center lg:flex-row card lg:mx-40  px-10">
+            <div className="flex items-center lg:flex-row card lg:mx-40 flex-col-reverse  px-2 mt-5 gap-5">
                 <div>
                     <h1 className="oleo text-7xl">Radiant <span className="text-red-700">Moments</span>  with loved ones</h1>
                     <p className="acme ">

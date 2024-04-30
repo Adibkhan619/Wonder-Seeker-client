@@ -1,29 +1,32 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, 
+    // useEffect,
+    //  useState 
+    } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider";
 
 const Drawer = () => {
     const { user, logOut } = useContext(AuthContext);
-    const [theme, setTheme] = useState('autumn');
-    useEffect(() => {
-        localStorage.setItem('theme', theme)
-        const localTheme = localStorage.getItem('theme');
-        document.querySelector('html').setAttribute('data-theme', localTheme)
-    }, [theme])
+    // const [theme, setTheme] = useState('autumn');
+    // useEffect(() => {
+    //     localStorage.setItem('theme', theme)
+    //     const localTheme = localStorage.getItem('theme');
+    //     document.querySelector('html').setAttribute('data-theme', localTheme)
+    // }, [theme])
 
-    const handleToggle = e => {
-        if (e.target.checked) {
-            setTheme ('halloween')
-        }
-        else{
-            setTheme('autumn')
-        }
-    }
+    // const handleToggle = e => {
+    //     if (e.target.checked) {
+    //         setTheme ('halloween')
+    //     }
+    //     else{
+    //         setTheme('autumn')
+    //     }
+    // }
     const handleLogOut = () => {
         logOut().then().catch();
     };
     return (
-        <div className="drawer drawer-end">
+        <div className="drawer    drawer-end">
             <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content  ">
                 {/* Page content here */}
@@ -31,22 +34,22 @@ const Drawer = () => {
                     htmlFor="my-drawer-4"
                     className="drawer-button btn font-bold btn-primary"
                 >
-                    Click Here!
+                    Your Profile
                 </label>
             </div>
-            <div className="drawer-side ">
+            <div className="drawer-side   ">
                 <label
                     htmlFor="my-drawer-4"
                     aria-label="close sidebar"
                     className="drawer-overlay"
                 ></label>
-                <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+                <ul className="menu  p-4 w-80 min-h-full bg-base-200 text-base-content">
                     {/* Sidebar content here */}
-                    <div className="flex justify-between">
+                    {/* <div className="flex justify-between">
                         <h1>Dark/Light</h1>
                         <input value="" type="checkbox" 
                 onChange={handleToggle} className="toggle" />
-                    </div>
+                    </div> */}
                     
                     {user ? (
                         <div className="lg:my-10 mx-3">
@@ -63,6 +66,7 @@ const Drawer = () => {
                         
                     ) : (
                         <ul>
+                            {/* <h1>Login to get Exclusive Benefits carefully crafted for you!</h1> */}
                             {" "}
                             <Link to="/register">
                                 <li>

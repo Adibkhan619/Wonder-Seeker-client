@@ -18,7 +18,7 @@ const TouristSpotCards = ({ place }) => {
 
     return (
         <div>
-            <div className="card shadow-lg border  glass  h-full">
+            <div className="card shadow-lg border mx-1 my-1 glass  h-full">
                 <figure>
                     <img src={image} alt="Tour!" />
                 </figure>
