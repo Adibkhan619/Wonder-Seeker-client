@@ -23,7 +23,7 @@ const Drawer = () => {
         logOut().then().catch();
     };
     return (
-        <div className="drawer  drawer-end">
+        <div className="drawer drawer-end">
             <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content  ">
                 {/* Page content here */}
@@ -34,7 +34,7 @@ const Drawer = () => {
                     Click Here!
                 </label>
             </div>
-            <div className="drawer-side">
+            <div className="drawer-side ">
                 <label
                     htmlFor="my-drawer-4"
                     aria-label="close sidebar"

@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import Drawer from "./Drawer";
+// import Drawer from "./Drawer";
 
 function BannerCarousel() {
     return (
@@ -22,7 +22,7 @@ function BannerCarousel() {
             // scrollbar={{ draggable: false }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
-            className="w-full z-0 mb-20"
+            className="w-full  mb-20"
         >
             <SwiperSlide>
                 <div>
@@ -48,7 +48,7 @@ function BannerCarousel() {
                                 </p>
                                 {/* <Link to="/register"><button className="btn btn-primary">Get Started</button>
 </Link> */}
-                                <Drawer></Drawer>
+                                {/* <Drawer></Drawer> */}
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@ function BannerCarousel() {
                                 </p>
                                 {/* <Link to="/register"><button className="btn btn-primary">Get Started</button>
 </Link> */}
-                                <Drawer></Drawer>
+                                {/* <Drawer></Drawer> */}
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@ function BannerCarousel() {
                                 </p>
                                 {/* <Link to="/register"><button className="btn btn-primary">Get Started</button>
 </Link> */}
-                                <Drawer></Drawer>
+                                {/* <Drawer></Drawer> */}
                             </div>
                         </div>
                     </div>

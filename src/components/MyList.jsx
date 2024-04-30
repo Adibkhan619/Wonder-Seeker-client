@@ -3,6 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import { FiEdit2 } from "react-icons/fi";
 import Swal from "sweetalert2";
+import { Fade } from "react-awesome-reveal";
 
 const MyList = () => {
     const { user } = useContext(AuthContext);
@@ -20,8 +21,8 @@ const MyList = () => {
             text: "You won't be able to revert this!",
             icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
+            confirmButtonColor: "#d65130",
+            cancelButtonColor: "#33c6dd",
             confirmButtonText: "Yes, delete it!",
         }).then((result) => {
             if (result.isConfirmed) {
@@ -48,8 +49,9 @@ const MyList = () => {
     };
 
     return (
-        <div>
-            <div className="p-6 px-10">
+        <Fade>
+            <div>
+            <div className="p-6 px-10 min-h-screen">
                 <table className="mt-4 w-full min-w-max table-auto text-left">
                     <thead>
                         <tr>
@@ -258,6 +260,8 @@ const MyList = () => {
                 </table>
             </div>
         </div>
+        </Fade>
+        
     );
 };
 

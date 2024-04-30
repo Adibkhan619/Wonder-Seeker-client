@@ -23,7 +23,7 @@ const TouristSpotCards = ({ place }) => {
                     <img src={image} alt="Tour!" />
                 </figure>
                 <div className="card-body justify-end">
-                    <div className="flex flex-row justify-between w-full pb-2 border-b-2 border-gray-200">
+                    <div className="flex flex-row justify-between w-full pb-2 border-dashed border-b-2 border-gray-300">
                         <h2 className="card-title ">{name}</h2>
                         <h1>
                             <em>{country}</em>

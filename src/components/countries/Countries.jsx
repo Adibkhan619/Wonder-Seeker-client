@@ -24,7 +24,7 @@ const Countries = () => {
     <div className="mx-10">
         {/* <p>{name}</p> */}
             <img src={name} alt="" />
-            <div className="grid grid-cols-3">
+            <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-3 mt-5">
             {
                 
                     country.map(place => <TouristSpotCards place={place} key={place._id}></TouristSpotCards>)

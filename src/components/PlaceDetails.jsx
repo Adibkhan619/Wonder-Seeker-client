@@ -18,7 +18,7 @@ const PlaceDetails = () => {
     } = place;
     return (
         <div>
-            <div className="card-body rounded-3xl glass lg:mx-5 lg:card-side bg-base-100 shadow-2xl gap-10">
+            <div className="card-body rounded-3xl glass mt-5  lg:mx-5 lg:card-side bg-base-100 shadow-2xl gap-10">
                 <figure className="items-center flex">
                     <img className="rounded-3xl" src={image} alt="Album" />
                 </figure>

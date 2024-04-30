@@ -45,7 +45,7 @@ const UpdateTouristSpot = () => {
             text: "You are about to update the Collection !",
             icon: "question",
             showCancelButton: true,
-            confirmButtonColor: "#3085d6",
+            confirmButtonColor: "#89d231",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, Update it!",
         })
@@ -61,13 +61,15 @@ const UpdateTouristSpot = () => {
                     .then((res) => res.json())
                     .then((data) => {
                         console.log(data);
-                        if (data.dataCount > 0) {
+                        if (data.modifiedCount > 0) {
                             Swal.fire({
                                 title: "Updated!",
                                 text: "Your Tourist Spot has been updated.",
                                 icon: "success",
-                            });
+                                confirmButtonText: "Cool!",
+                            });                           
                         }
+                        // form.reset()
                     });
             }
         });

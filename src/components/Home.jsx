@@ -6,17 +6,20 @@ import Login from "./Login";
 import HomeCountries from "./HomeCountries";
 import HomeTouristSpot from "./HomeTouristSpot";
 import BannerCarousel from "./style/BannerCarousel";
-
+import { Fade } from "react-awesome-reveal";
+import HomeDecor from "./style/HomeDecor";
+// import Drawer2 from "./style/Drawer2";
 
 const Home = () => {
 
     return (
         <div className="mukta">
+            <Fade>
+
+            {/* <Drawer2></Drawer2> */}
             <Banner></Banner>
             <HomeTypewriter></HomeTypewriter>
             <BannerCarousel></BannerCarousel>     
-
-            
 
             <div className="border-gray-300 border-dashed border-y-4 lg:my-14 lg:mx-20">
                 <h1 className="text-5xl py-8 text-center"><span className="acme text-7xl">Explore </span> 
@@ -29,6 +32,8 @@ const Home = () => {
             </div>
             <HomeCountries></HomeCountries>
 
+            <HomeDecor></HomeDecor>
+
             <div className="border-gray-300 border-dashed my-8 border-y-4 lg:my-14 lg:mx-20">
                 <h1 className="text-5xl py-8 text-center oleo font-bold"><span className="text-red-600  font-bold font-sans">
                         Discover 
@@ -39,7 +44,6 @@ const Home = () => {
                 </h1>
             </div>
             <HomeTouristSpot></HomeTouristSpot>
-
 
             <div className="border-gray-300 border-dashed border-y-4 lg:my-14 lg:mx-20">
                             <h1 className="text-5xl py-8 text-center"><span className="acme text-7xl">Join </span> 
@@ -54,8 +58,8 @@ const Home = () => {
 
             <div className="border-gray-300 my-8 border-dashed border-y-4 lg:my-14 lg:mx-20 space-y-4">
             <h1 className="text-5xl pt-6 text-center"><span className="acme text-7xl">Reviews </span> 
-                     from <span className=" sacramento text-7xl">Our</span>{" "}
-                    of{" "}
+                     from <span className=" sacramento text-7xl font-bold">Our</span>{" "}
+                    {" "}
                     <span className="text-red-600  font-bold font-sans">
                         Adventurers
                     </span>
@@ -70,6 +74,7 @@ const Home = () => {
                 </p>
             </div>
             <UserReview></UserReview>
+            </Fade>
         </div>
     );
 };

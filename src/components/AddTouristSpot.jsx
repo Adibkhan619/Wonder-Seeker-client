@@ -51,19 +51,23 @@ const AddTouristSpot = () => {
                     icon: "success",
                     confirmButtonText: "Cool",
                 });
+                form.reset()
             });
     };
 
     return (
         <div className=" dark:text-gray-100  text-gray-900  ">
-            <section className="p-6 bg-gray-600 dark:bg-gray-700 opacity-100 text-gray-500 dark:text-gray-900 glass" >
+            <section className="p-6 bg-gray-600 dark:bg-gray-700 opacity-100 text-gray-500 dark:text-gray-900 glass " style={{
+                            backgroundImage:
+                                "url(https://i.postimg.cc/yYPY8m85/mantas-hesthaven-g1-Wdc-Kc-V3w-unsplash.jpg)",
+                        }} >
                 <form
                     onSubmit={handleAddTouristSpot}
                     noValidate=""
                     action=""
-                    className="container flex flex-col mx-auto space-y-12 glass"
+                    className="container flex flex-col mx-auto space-y-12 "
                 >
-                    <div className="my-8 grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm space-y-4 bg-gray-900 dark:bg-gray-500 bg-opacity-20 glass " 
+                    <div className="my-8 grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm space-y-4   glass " 
                     >
                         <div className="space-y-2 col-span-full lg:col-span-1">
                             <p className="font-semibold text-xl">Add Tourist Spot</p>
@@ -77,7 +81,7 @@ const AddTouristSpot = () => {
 
                         <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3 lg:space-y-4">
 
-                            <div className="col-span-full sm:col-span-3">
+                            <div className="col-span-full sm:col-span-3 mt-4">
                                 <label htmlFor="firstname" className="text-lg font-semibold text-gray-900">
                                     Name
                                 </label>

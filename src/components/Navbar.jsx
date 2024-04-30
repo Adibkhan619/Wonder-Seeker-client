@@ -63,7 +63,13 @@ const Navbar = () => {
                             {Navlinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <div className="flex items-center gap-2">
+                        <div>
+                        <img  className="w-16 h-16 rounded-full border-4 " src="https://i.postimg.cc/J76hY5Cc/Dream.png" alt="" />
+                    </div>
+                    <h1 className="oleo text-xl">Dream Seeker</h1>
+                    </div>
+                    
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-3 text-lg">
