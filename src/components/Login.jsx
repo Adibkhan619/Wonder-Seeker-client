@@ -49,7 +49,7 @@ const Login = () => {
   return (
     <div>
       <Helmet>
-        <title>Login</title>
+        <title>Wonder Seeker | Login</title>
       </Helmet>
         <div className="hero max-w-full  mx-auto lg:h-[630px] lg:bg-gray-900 lg:mb-20">
               <img className="hero-overlay lg:max-h-[630px] p-3 lg:p-0 lg:opacity-70" src="https://i.postimg.cc/V66rsDys/david-marcu-78-A265w-Pi-O4-unsplash.jpg" alt="" />

@@ -17,7 +17,7 @@ const Home = () => {
     return (
         <div className="mukta">
                 <Helmet>
-                    <title>Dream Seeker | Home</title>
+                    <title>Wonder Seeker | Home</title>
                 </Helmet>
             <Fade>
             {/* <Drawer></Drawer> */}

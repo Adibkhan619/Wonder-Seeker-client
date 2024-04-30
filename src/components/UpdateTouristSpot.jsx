@@ -19,7 +19,8 @@ const UpdateTouristSpot = () => {
         const country = form.country.value;
         const location = form.location.value;
         const description = form.description.value;
-        const cost = form.cost.value;
+        const avgCost = form.cost.value;
+        const cost = parseInt(avgCost);
         const season = form.season.value;
         const time = form.time.value;
         const visitorPerYear = form.visitorPerYear.value;
@@ -81,27 +82,26 @@ const UpdateTouristSpot = () => {
                 <Helmet>
                     <title>Update Tourist Spot</title>
                 </Helmet>
-            <section className="p-6 bg-gray-600 dark:bg-gray-700 opacity-100 text-gray-500 dark:text-gray-900 glass " style={{backgroundImage: 'url(https://i.postimg.cc/HL38CFhP/felix-rostig-Um-V2wr-Vbq8-unsplash.jpg)'}}>
+            <section className="  p-6 lg:my-10 bg-gray-600 dark:bg-gray-700 opacity-100  glass " style={{backgroundImage: 'url(https://i.postimg.cc/HL38CFhP/felix-rostig-Um-V2wr-Vbq8-unsplash.jpg)'}}>
                 <form
                     onSubmit={handleUpdate}
                     noValidate=""
                     action=""
                     className="container flex flex-col mx-auto space-y-12"
                 >
-                    <div className="my-8 grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm space-y-4   glass ">
+                    <div className="my-8 grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm space-y-4 card text-black  glass ">
                         <div className="space-y-2 col-span-full lg:col-span-1">
-                            <p className="font-medium">Add Tourist Spot</p>
+                            <p className="font-semibold text-gray-900 acme text-4xl ">Update Tourist Spot</p>
                             <p className="text-xs">
-                                Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit. Adipisci fuga autem eum!
+                            Help fellow travelers discover hidden gems by adding your favorite tourist spots to our database. Whether it is a charming cafe tucked away in a bustling city or a serene viewpoint offering panoramic vistas, share your recommendations with the world. Your contributions will enrich the travel experiences of others and make exploring the globe even more rewarding. Let us build a vibrant community of exploration together!
                             </p>
-                            <p>{user.displayName}</p>
-                            <p>{user.email}</p>
+                            <p className="bg-gray-300 p-2 px-4 rounded-full bg-opacity-50"><span className="font-semibold text-lg">User : </span> {user.displayName}</p>
+                            <p className="bg-gray-300 p-2 px-4 rounded-full bg-opacity-50"><span className="font-semibold text-lg"> Email : </span>{user.email}</p>
                         </div>
 
                         <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                             <div className="col-span-full sm:col-span-3">
-                                <label htmlFor="firstname" className="text-sm">
+                                <label htmlFor="firstname" className="text-lg font-semibold text-gray-900">
                                     Name
                                 </label>
                                 <input
@@ -109,14 +109,14 @@ const UpdateTouristSpot = () => {
                                     name="name"
                                     defaultValue={name}
                                     placeholder="Name"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75  focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2 text-gray-500"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-3">
                                 <label htmlFor="lastname" className="text-lg font-semibold text-gray-900">
                                     Country
                                 </label>
-                            <select name="country" className="select select-bordered h-4 min-h-10 w-full opacity-85  rounded-md focus:ring focus:ring-opacity-75 item-center text-gray-900 dark:text-gray-400 my-auto focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2 text-sm">
+                            <select name="country" defaultValue={country}  className="select select-bordered h-4 min-h-10 w-full opacity-85  rounded-md focus:ring focus:ring-opacity-75 item-center text-gray-900 dark:text-gray-400 my-auto focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2 text-sm">
                                 <option >Bangladesh</option>
                                 <option>Malaysia</option>
                                 <option>Thailand</option>
@@ -126,7 +126,7 @@ const UpdateTouristSpot = () => {
                             </select>
                             </div> 
                             <div className="col-span-full sm:col-span-3">
-                                <label htmlFor="email" className="text-sm">
+                                <label htmlFor="email" className="text-lg font-semibold text-gray-900">
                                     Location
                                 </label>
                                 <input
@@ -134,11 +134,11 @@ const UpdateTouristSpot = () => {
                                     placeholder="Location"
                                     defaultValue={location}
                                     name="location"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-3">
-                                <label htmlFor="email" className="text-sm">
+                                <label htmlFor="email" className="text-lg font-semibold text-gray-900">
                                     Image URL
                                 </label>
                                 <input
@@ -146,11 +146,11 @@ const UpdateTouristSpot = () => {
                                     placeholder="Photo"
                                     defaultValue={image}
                                     name="image"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full">
-                                <label htmlFor="address" className="text-sm">
+                                <label htmlFor="address" className="text-lg font-semibold text-gray-900">
                                     Description
                                 </label>
                                 <input
@@ -158,11 +158,11 @@ const UpdateTouristSpot = () => {
                                     placeholder="Short Description"
                                     defaultValue={description}
                                     name="description"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-2">
-                                <label htmlFor="city" className="text-sm">
+                                <label htmlFor="city" className="text-lg font-semibold text-gray-900">
                                     Average Cost
                                 </label>
                                 <input
@@ -170,11 +170,11 @@ const UpdateTouristSpot = () => {
                                     placeholder="Average Cost"
                                     name="cost"
                                     defaultValue={cost}
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-2">
-                                <label htmlFor="state" className="text-sm">
+                                <label htmlFor="state" className="text-lg font-semibold text-gray-900">
                                     Seasonality
                                 </label>
                                 <input
@@ -182,11 +182,11 @@ const UpdateTouristSpot = () => {
                                     placeholder="Season"
                                     name="season"
                                     defaultValue={season}
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-2">
-                                <label htmlFor="zip" className="text-sm">
+                                <label htmlFor="zip" className="text-lg font-semibold text-gray-900">
                                     Travel Time
                                 </label>
                                 <input
@@ -195,11 +195,11 @@ const UpdateTouristSpot = () => {
                                     defaultValue={time}
                                     placeholder="Travel Time"
                                     name="time"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-2">
-                                <label htmlFor="zip" className="text-sm">
+                                <label htmlFor="zip" className="text-lg font-semibold text-gray-900">
                                     Visitors Per Year
                                 </label>
                                 <input
@@ -208,14 +208,14 @@ const UpdateTouristSpot = () => {
                                     defaultValue={visitorPerYear}
                                     name="visitorPerYear"
                                     placeholder="Visitors per year"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-500 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
 
                             <div className="col-span-full sm:col-span-4 ">
                                 <button
                                     type="submit"
-                                    className="btn col-span-full lg:col-span-4 sm:col-span-3 my-2 w-full mt-5"
+                                    className="btn btn-primary col-span-full lg:col-span-4 sm:col-span-3 my-2 w-full mt-5 text-xl acme"
                                 >
                                     Update
                                 </button>

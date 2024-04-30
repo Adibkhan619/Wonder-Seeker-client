@@ -7,7 +7,7 @@ const Footer = () => {
                 <aside>
                 <img  className="lg:w-16 lg:h-16 w-12 h-12  rounded-full border-4 " src="https://i.postimg.cc/J76hY5Cc/Dream.png" alt="" />
                     <p className="font-bold">
-                        Dream Seeker <br />
+                        Wonder Seeker <br />
                         Providing tourism service since 2021
                     </p>
                     <p>Copyright © 2024 - All right reserved</p>

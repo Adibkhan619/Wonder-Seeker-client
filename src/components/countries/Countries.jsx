@@ -21,10 +21,10 @@ const Countries = () => {
     return (
 
         
-    <div className="mx-10">
+    <div className="lg:mx-10 mx-1">
         {/* <p>{name}</p> */}
             <img src={name} alt="" />
-            <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-3 mt-5">
+            <div className="grid mb-10 md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-3 mt-5 mx-1">
             {
                 
                     country.map(place => <TouristSpotCards place={place} key={place._id}></TouristSpotCards>)

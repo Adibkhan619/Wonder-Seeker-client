@@ -90,7 +90,7 @@ const Navbar = () => {
                         <div>
                         <img  className="lg:w-16 lg:h-16 w-10 h-10 rounded-full border-4 border-orange-400 " src="https://i.postimg.cc/J76hY5Cc/Dream.png" alt="" />
                     </div>
-                    <h1 className="oleo text-xl ">Dream Seeker</h1>
+                    <h1 className="oleo text-xl ">Wonder Seeker</h1>
                     </div>
                     
                 </div>
@@ -117,7 +117,8 @@ const Navbar = () => {
 
                             <button
                                 onClick={handleLogOut}
-                                className="btn btn-primary acme border-none"
+                                className="btn btn-primary
+                                 acme border-none"
                             >
                                 Log Out
                             </button>

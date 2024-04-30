@@ -34,7 +34,7 @@ const HomeDecor = () => {
                         the enduring bonds of friendship and love.
                     </p>
                 </div>
-                <img className="lg:h-[500px] lg:w-[700px] md:h-[300px] md:w-[500px]"
+                <img className="lg:h-[500px] lg:w-[800px] md:h-[300px] md:w-[500px]"
                     src="https://i.postimg.cc/R0hXrnSH/pngwing-com-2.png"
                     alt=""
                 />

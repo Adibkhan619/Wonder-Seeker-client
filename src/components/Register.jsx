@@ -54,7 +54,7 @@ const Register = () => {
         <div>
             <div>
                 <Helmet>
-                    <title>Register</title>
+                    <title>Wonder Seeker | Register</title>
                 </Helmet>
                 <div className="hero  max-w-full  mx-auto lg:h-[630px]  lg:mb-20">
                     <img

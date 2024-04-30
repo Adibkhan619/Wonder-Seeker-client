@@ -18,11 +18,11 @@ const TouristSpotCards = ({ place }) => {
 
     return (
         <div>
-            <div className="card shadow-lg border mx-1 my-1 glass  h-full">
+            <div className="card shadow-lg border  mx-1 my-1 glass  h-full">
                 <figure>
                     <img src={image} alt="Tour!" />
                 </figure>
-                <div className="card-body justify-end">
+                <div className="card-body justify-end mb-10">
                     <div className="flex flex-row justify-between w-full pb-2 border-dashed border-b-2 border-gray-300">
                         <h2 className="card-title ">{name}</h2>
                         <h1>
@@ -31,7 +31,7 @@ const TouristSpotCards = ({ place }) => {
                     </div>
                     <div className="flex justify-between">
                         <h1>Average Cost:</h1>
-                        <h1 className="font-semibold">{cost}</h1>
+                        <h1 className="font-semibold">{cost}$</h1>
                     </div>
                     <div className="flex justify-between">
                         <h1>Season:</h1>

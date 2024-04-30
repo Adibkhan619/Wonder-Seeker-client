@@ -14,7 +14,8 @@ const AddTouristSpot = () => {
         const country = form.country.value;
         const location = form.location.value;
         const description = form.description.value;
-        const cost = form.cost.value;
+        const avgCost = form.cost.value;
+        const cost = parseInt(avgCost);
         const season = form.season.value;
         const time = form.time.value;
         const visitorPerYear = form.visitorPerYear.value;
@@ -35,6 +36,7 @@ const AddTouristSpot = () => {
             image,
         };
         console.log(newTouristSpot);
+        console.log(typeof(cost))
 
         fetch("http://localhost:5000/touristSpots", {
             method: "POST",
@@ -74,7 +76,7 @@ const AddTouristSpot = () => {
                     <div className="my-8 grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm space-y-4   glass " 
                     >
                         <div className="space-y-2 col-span-full lg:col-span-1">
-                            <p className="font-semibold text-xl">Add Tourist Spot</p>
+                            <p className="font-semibold text-4xl acme">Add Tourist Spot</p>
                             <p className="text-sm">
                             Help fellow travelers discover hidden gems by adding your favorite tourist spots to our database. Whether it is a charming cafe tucked away in a bustling city or a serene viewpoint offering panoramic vistas, share your recommendations with the world. Your contributions will enrich the travel experiences of others and make exploring the globe even more rewarding. Let us build a vibrant community of exploration together!
                             </p>
@@ -93,7 +95,7 @@ const AddTouristSpot = () => {
                                     type="text"
                                     name="name"
                                     placeholder="Name"
-                                    className="w-full opacity-85 rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full opacity-85 rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                                 
@@ -101,7 +103,7 @@ const AddTouristSpot = () => {
                                 <label htmlFor="lastname" className="text-lg font-semibold text-gray-900">
                                     Country
                                 </label>
-                            <select name="country" className="select select-bordered h-4 min-h-10 w-full opacity-85  rounded-md focus:ring focus:ring-opacity-75 item-center text-gray-900 dark:text-gray-400 my-auto focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2 text-sm">
+                            <select name="country" className="select select-bordered h-4 min-h-10 w-full opacity-85  rounded-md focus:ring focus:ring-opacity-75 item-center text-gray-900 dark:text-gray-400 my-auto focus:ring-violet-400 focus:dark:ring-orange-600   p-2 text-sm">
                                 <option >Bangladesh</option>
                                 <option>Malaysia</option>
                                 <option>Thailand</option>
@@ -120,7 +122,7 @@ const AddTouristSpot = () => {
                                     type="text"
                                     placeholder="Country"
                                     name="country"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div> */}
 
@@ -136,7 +138,7 @@ const AddTouristSpot = () => {
                                     type="text"
                                     placeholder="Location"
                                     name="location"
-                                    className="w-full opacity-85 rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full opacity-85 rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-3">
@@ -147,7 +149,7 @@ const AddTouristSpot = () => {
                                     type="text"
                                     placeholder="Photo"
                                     name="image"
-                                    className="w-full opacity-85 rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full opacity-85 rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full">
@@ -158,7 +160,7 @@ const AddTouristSpot = () => {
                                     type="text"
                                     placeholder="Short Description"
                                     name="description"
-                                    className="w-full opacity-85 rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full opacity-85 rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-2">
@@ -169,7 +171,7 @@ const AddTouristSpot = () => {
                                     type="text"
                                     placeholder="Average Cost"
                                     name="cost"
-                                    className="w-full opacity-85 rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full opacity-85 rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-2">
@@ -180,7 +182,7 @@ const AddTouristSpot = () => {
                                     type="text"
                                     placeholder="Season"
                                     name="season"
-                                    className="w-full opacity-85 rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full opacity-85 rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-2">
@@ -192,7 +194,7 @@ const AddTouristSpot = () => {
                                     type="text"
                                     placeholder="Travel Time"
                                     name="time"
-                                    className="w-full opacity-85 rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full opacity-85 rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-2">
@@ -204,7 +206,7 @@ const AddTouristSpot = () => {
                                     type="text"
                                     name="visitorPerYear"
                                     placeholder="Visitors per year"
-                                    className="w-full opacity-85 rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full opacity-85 rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-400 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             {/* <div className="col-span-full sm:col-span-2">
@@ -216,7 +218,7 @@ const AddTouristSpot = () => {
                                     name ="userName"
                                     defaultValue={user.displayName}
                                     placeholder="Your Name"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div>
                             <div className="col-span-full sm:col-span-2">
@@ -228,14 +230,14 @@ const AddTouristSpot = () => {
                                     name ="userEmail"
                                     defaultValue={user.email}
                                     placeholder="Your Email"
-                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-violet-600 border-gray-700 dark:border-gray-300 p-2"
+                                    className="w-full rounded-md focus:ring focus:ring-opacity-75 text-gray-900 dark:text-gray-50 focus:ring-violet-400 focus:dark:ring-orange-600 border-gray-700 dark:border-gray-300 p-2"
                                 />
                             </div> */}
 
                             <div className="col-span-full sm:col-span-4 ">
                                 <button
                                     type="submit"
-                                    className="btn bg-orange-400 col-span-full lg:col-span-4 sm:col-span-3 my-2 w-full mt-5"
+                                    className="btn btn-primary col-span-full lg:col-span-4 sm:col-span-3 my-2 w-full mt-5 text-lg acme"
                                 >
                                     Add to your collection
                                 </button>

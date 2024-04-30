@@ -223,7 +223,7 @@ const MyList = () => {
                                     <div className="flex items-center gap-3">
                                         <div className="flex flex-col">
                                             <p className="block antialiased font-sans text-base leading-normal text-blue-gray-900 font-normal">
-                                                {item.cost}
+                                                {item.cost}$
                                             </p>
                                             {/* <p className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-normal opacity-70">{visitorPerYear}</p> */}
                                         </div>
